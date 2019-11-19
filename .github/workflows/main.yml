@@ -1,0 +1,22 @@
+name: Docker Image CI
+
+on: [push]
+
+jobs:
+
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Build the Docker image
+      run: docker build . --file Dockerfile --tag hugomd/ascii-live:${GITHUB_SHA:0:8} --tag hugomd/ascii-live:latest
+    - name: Push docker image
+      env:
+        DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
+        DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
+      run: |
+        docker login -u $DOCKER_USERNAME -p $DOCKER_PASSWORD
+        docker push hugomd/ascii-live:${GITHUB_SHA:0:8}
+        docker push hugomd/ascii-live:latest
