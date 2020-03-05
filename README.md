@@ -31,7 +31,7 @@ var myAnimationFrames = []string{
 * Commit and push your changes, and make a PR! If this is your first time making a PR, [check GitHub's help page on the topic](https://help.github.com/en/github/collaborating-with-issues-and-pull-requests/creating-a-pull-request)
 
 ## Frame Contributions
-Here's a list of lovely people who have contribute frames to this project:
+Here's a list of lovely people who have contributed frames to this project:
 
 | Contributor                           | Frame File                                    | Repository                                                      |
 |---------------------------------------|-----------------------------------------------|-----------------------------------------------------------------|
