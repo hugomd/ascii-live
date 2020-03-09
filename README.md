@@ -11,6 +11,17 @@ curl ascii.live/parrot
 
 <img src="./demo.gif" width="400"/>
 
+## Running locally
+To run the server locally on port `8080`, run:
+```bash
+go run main.go
+```
+
+## Running in Docker
+```bash
+docker run -p 8080:8080 hugomd/ascii-live:latest
+```
+
 ## Adding frames
 * [Fork this repository](https://github.com/hugomd/ascii-live/fork)
 * Create a new frame file in [`/frames`](./frames), call it the name of your frames/animation, e.g. `parrot.go`
