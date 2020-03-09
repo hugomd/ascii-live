@@ -31,4 +31,5 @@ var FrameMap = map[string]FrameType{
 	"forrest": Forrest,
 	"parrot":  Parrot,
 	"clock":   Clock,
+	"nyan":    Nyan,
 }
