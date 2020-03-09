@@ -10,7 +10,7 @@ spec:
         app: ascii-live
     spec:
       containers:
-      - image: hugomd/ascii-live:3463ddef
+      - image: hugomd/ascii-live:17fac409
         name: ascii-live
         ports:
         - containerPort: 8080
