@@ -1,9 +1,12 @@
-apiVersion: extensions/v1beta1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ascii-live
   namespace: ascii-live
 spec:
+  selector:
+    matchLabels:
+      app: ascii-live
   template:
     metadata:
       labels:
@@ -29,12 +32,13 @@ spec:
       targetPort: 8080
       port: 8080
 ---
-apiVersion: extensions/v1beta1
+apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: ascii-live
   namespace: ascii-live
   annotations:
+    cert-manager.io/cluster-issuer: letsencrypt-prod
     kubernetes.io/ingress.class: nginx
     kubernetes.io/preserve-host: "true"
     nginx.ingress.kubernetes.io/ssl-redirect: "false"
@@ -44,9 +48,12 @@ spec:
     http:
       paths:
       - path: /
+        pathType: Prefix
         backend:
-          serviceName: ascii-live
-          servicePort: 8080
+          service:
+            name: ascii-live
+            port:
+              number: 8080
   tls:
     - secretName: ascii-live-tls-prod-cert
       hosts:
