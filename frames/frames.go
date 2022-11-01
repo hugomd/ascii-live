@@ -28,9 +28,10 @@ func DefaultFrameType(frames []string) FrameType {
 }
 
 var FrameMap = map[string]FrameType{
-	"forrest": Forrest,
-	"parrot":  Parrot,
-	"clock":   Clock,
-	"nyan":    Nyan,
-	"rick":    Rick,
+	"forrest":         Forrest,
+	"parrot":          Parrot,
+	"clock":           Clock,
+	"nyan":            Nyan,
+	"rick":            Rick,
+	"can-you-hear-me": Rick,
 }
