@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"net/http"
+	"strings"
 	"time"
 
 	"github.com/hugomd/ascii-live/frames"
@@ -17,6 +18,10 @@ var NotFoundMessage = map[string]string{
 	"error": "Frames not found. Navigate to /list for list of frames. Navigate to https://github.com/hugomd/ascii-live to submit new frames.",
 }
 
+var NotCurledMessage = map[string]string{
+	"error": "You almost ruined a good surprise. Come on, curl it in terminal.",
+}
+
 var availableFrames []string
 
 func init() {
@@ -25,24 +30,26 @@ func init() {
 	}
 }
 
-func listHandler(w http.ResponseWriter, r *http.Request) {
+func writeJson(w http.ResponseWriter, r *http.Request, res interface{}, status int) {
 	w.Header().Set("Content-Type", "application/json")
-	data, err := json.Marshal(map[string][]string{"frames": availableFrames})
+	data, err := json.Marshal(res)
 	if err != nil {
 		return
 	}
-	w.WriteHeader(http.StatusOK)
+	w.WriteHeader(status)
 	fmt.Fprint(w, string(data))
 }
 
+func listHandler(w http.ResponseWriter, r *http.Request) {
+	writeJson(w, r, map[string][]string{"frames": availableFrames}, http.StatusOK)
+}
+
 func notFoundHandler(w http.ResponseWriter, r *http.Request) {
-	w.Header().Set("Content-Type", "application/json")
-	data, err := json.Marshal(NotFoundMessage)
-	if err != nil {
-		return
-	}
-	w.WriteHeader(http.StatusNotFound)
-	fmt.Fprint(w, string(data))
+	writeJson(w, r, NotFoundMessage, http.StatusNotFound)
+}
+
+func notCurledHandler(w http.ResponseWriter, r *http.Request) {
+	writeJson(w, r, NotCurledMessage, http.StatusExpectationFailed)
 }
 
 func handler(w http.ResponseWriter, r *http.Request) {
@@ -56,6 +63,12 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	frames, ok := frames.FrameMap[frameSource]
 	if !ok {
 		notFoundHandler(w, r)
+		return
+	}
+
+	userAgent := r.Header.Get("User-Agent")
+	if !strings.Contains(userAgent, "curl") {
+		notCurledHandler(w, r)
 		return
 	}
 
