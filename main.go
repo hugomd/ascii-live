@@ -59,17 +59,6 @@ func handler(w http.ResponseWriter, r *http.Request) {
 	vars := mux.Vars(r)
 	
 	frameSource := vars["frameSource"]
-	returnFrames(w, r, cn, flusher, frameSource)
-}
-
-func homeHandler(w http.ResponseWriter, r *http.Request) {
-	cn := w.(http.CloseNotifier)
-	flusher := w.(http.Flusher)
-
-	returnFrames(w, r, cn, flusher, "batman")
-}
-
-func returnFrames(w http.ResponseWriter, r *http.Request, cn http.CloseNotifier, flusher http.Flusher, frameSource string) {
 	glog.Infof("Frame source %s", frameSource)
 
 	frames, ok := frames.FrameMap[frameSource]
@@ -122,7 +111,6 @@ func main() {
 	flag.Set("logtostderr", "true")
 
 	r := mux.NewRouter()
-	r.HandleFunc("/", homeHandler).Methods("GET")
 	r.HandleFunc("/list", listHandler).Methods("GET")
 	r.HandleFunc("/{frameSource}", handler).Methods("GET")
 	r.NotFoundHandler = http.HandlerFunc(notFoundHandler)
