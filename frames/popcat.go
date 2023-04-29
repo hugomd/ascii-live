@@ -1,9 +1,9 @@
 package frames
 
 // This is the value stored in the FrameMap
-var popcat = DefaultFrameType(popcatFrames)
+var Popcat = DefaultFrameType(PopcatFrames)
 
-var popcatFrames = []string{
+var PopcatFrames = []string{
   `                                               ,,,,,
      ,g@gg,,                                 g$L||lll,
      $$$$$$$$@g                            ,$ll|||llll
