@@ -1,7 +1,7 @@
 package frames
 
 // This is the value stored in the FrameMap
-var dados = DefaultFrameType(dadosFrames)
+var Dados = DefaultFrameType(dadosFrames)
 
 var dadosFrames = []string{
   `@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
