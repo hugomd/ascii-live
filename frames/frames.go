@@ -37,4 +37,6 @@ var FrameMap = map[string]FrameType{
 	"donut":           Donut,
 	"batman":          Batman,
 	"coin":            Coin,
+	"torus-knot":      TorusKnot,
+	"knot":            TorusKnot,
 }
