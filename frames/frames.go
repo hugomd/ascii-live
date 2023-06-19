@@ -35,4 +35,7 @@ var FrameMap = map[string]FrameType{
 	"rick":            Rick,
 	"can-you-hear-me": Rick,
 	"donut":           Donut,
+	"spidyswing":      spidy
+	"batman-running":  BNR
+	"BNR":             BNR
 }
