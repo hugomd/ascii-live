@@ -43,4 +43,5 @@ var FrameMap = map[string]FrameType{
 	"batman-running":  BNR,
 	"bnr":             BNR,
 	"playstation":     PlayStation,
+	"hes":             HES,
 }
