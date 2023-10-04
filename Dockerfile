@@ -1,4 +1,4 @@
-FROM golang:1.13-alpine AS build-env
+FROM golang:1.17-alpine AS build-env
 ENV GO111MODULE=on
 WORKDIR /go/src/github.com/hugomd/ascii-live/
 RUN apk add ca-certificates
