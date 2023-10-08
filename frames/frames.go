@@ -8,7 +8,7 @@ type FrameType struct {
 // Create a function that returns the next frame, based on length
 func DefaultGetFrame(frames []string) func(int) string {
 	return func(i int) string {
-		return frames[i%(len(frames)-1)]
+		return frames[i%(len(frames))]
 	}
 }
 
