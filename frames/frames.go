@@ -42,4 +42,5 @@ var FrameMap = map[string]FrameType{
 	"spidyswing":      Spidy,
 	"batman-running":  BNR,
 	"bnr":             BNR,
+	"playstation":     PlayStation,
 }
