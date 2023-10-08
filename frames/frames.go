@@ -1,8 +1,11 @@
 package frames
 
+import "time"
+
 type FrameType struct {
 	GetFrame  func(int) string
 	GetLength func() int
+	GetSleep  func() time.Duration
 }
 
 // Create a function that returns the next frame, based on length
@@ -19,11 +22,19 @@ func DefaultGetLength(frames []string) func() int {
 	}
 }
 
+// Sleep time between frames
+func DefaultGetSleep() func() time.Duration {
+	return func() time.Duration {
+		return time.Millisecond * 70
+	}
+}
+
 // Given frames, create a FrameType with those frames
 func DefaultFrameType(frames []string) FrameType {
 	return FrameType{
 		GetFrame:  DefaultGetFrame(frames),
 		GetLength: DefaultGetLength(frames),
+		GetSleep:  DefaultGetSleep(),
 	}
 }
 

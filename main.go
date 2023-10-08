@@ -87,7 +87,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 				i = 0
 			}
 			// Artificially wait between reponses.
-			time.Sleep(time.Millisecond * 70)
+			time.Sleep(frames.GetSleep())
 
 			// Clear screen
 			clearScreen := "\033[2J\033[H"
