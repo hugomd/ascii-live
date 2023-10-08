@@ -3,7 +3,7 @@ package frames
 var TorusKnot = DefaultFrameType(KnotFrames)
 
 var KnotFrames = []string{
-`                                                              
+	`                                                              
                                                               
                                                               
                                                               
@@ -34,7 +34,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -66,7 +66,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -98,7 +98,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -130,7 +130,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -162,7 +162,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                  .                            
@@ -194,7 +194,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -226,7 +226,7 @@ var KnotFrames = []string{
                   ..........                                  
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -258,7 +258,7 @@ var KnotFrames = []string{
                    ........:....                              
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                              :.                               
@@ -290,7 +290,7 @@ var KnotFrames = []string{
                   ........::::::::.                           
                            ...                                
                                                               
-`,`
+`, `
                                                               
                         ..                                    
                        .:::..                                 
@@ -322,7 +322,7 @@ var KnotFrames = []string{
                   ....::::::::::::::.                         
                          .    ....                            
                                                               
-`,`
+`, `
                                                               
                        .                                      
                    ..::::..                                   
@@ -354,7 +354,7 @@ var KnotFrames = []string{
                  .....:::::::------::..                       
                        .............                          
                                                               
-`,`
+`, `
                                                               
                    ....                                       
                 ...::::::.                                    
@@ -386,7 +386,7 @@ var KnotFrames = []string{
                   ...::::::::-----::.                         
                        ...........                            
                                                               
-`,`
+`, `
                                                               
                     .                                         
                ....::::...                                    
@@ -418,7 +418,7 @@ var KnotFrames = []string{
                 .....::::::::::..                             
                        ....                                   
                                                               
-`,`
+`, `
                                                               
                                                               
                  ......                                       
@@ -450,7 +450,7 @@ var KnotFrames = []string{
                   .......                                     
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -482,7 +482,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -514,7 +514,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -546,7 +546,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -578,7 +578,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -610,7 +610,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -642,7 +642,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -674,7 +674,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -706,7 +706,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -738,7 +738,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -770,7 +770,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -802,7 +802,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                 ..                                            
@@ -834,7 +834,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                      ..                                       
                      .:                                       
@@ -866,7 +866,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                           ..                                  
                           .                                   
                          ..                                   
@@ -898,7 +898,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -930,7 +930,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -962,7 +962,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -994,7 +994,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -1026,7 +1026,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -1058,7 +1058,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -1090,7 +1090,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -1122,7 +1122,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -1154,7 +1154,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -1186,7 +1186,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -1218,7 +1218,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
@@ -1250,7 +1250,7 @@ var KnotFrames = []string{
                                                               
                                                               
                                                               
-`,`
+`, `
                                                               
                                                               
                                                               
