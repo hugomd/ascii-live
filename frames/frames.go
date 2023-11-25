@@ -59,5 +59,6 @@ var FrameMap = map[string]FrameType{
 	"as":              AStrend,
 	"bomb":            Bomb,
 	"maxwell":         Maxwell,
-    "earth":           Earth,
+	"earth":           Earth,
+	"kitty":           Kitty,
 }
