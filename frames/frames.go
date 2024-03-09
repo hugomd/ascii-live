@@ -58,4 +58,5 @@ var FrameMap = map[string]FrameType{
 	"torus-knot":      TorusKnot,
 	"as":              AStrend,
 	"bomb":            Bomb,
+	"maxwell":         Maxwell,
 }
