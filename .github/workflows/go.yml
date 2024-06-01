@@ -40,7 +40,8 @@ jobs:
         cache: true
         # Used to specify the path to a dependency file - go.sum
         cache-dependency-path: ../../go.sum
-
+    - name: Installing dependencies
+      run: go install github.com/gopherjs/gopherjs@v1.19.0-beta1
       
           
   
