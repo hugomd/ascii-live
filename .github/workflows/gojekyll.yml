@@ -27,10 +27,11 @@ jobs:
 
       - name: Setup Go environment
         uses: actions/setup-go@v5.0.1
-      
+      - name: Updating Bundler
+        run: gem update bundler
+      - name: Installing GitHub Pages plugin from Gemfile
+        run: bundle install
       - name: Installing GoJekyll
         run: go install github.com/osteele/gojekyll@latest
       - name: Building Go file
         run: gojekyll build
-      - name: Serving Gojekyll
-        run: gojekyll serve
