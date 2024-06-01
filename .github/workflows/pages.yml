@@ -27,6 +27,9 @@ jobs:
         name: go-app
         path: |
           .
+    permissions:
+      id-token: write
+      pages: write
           
   deploy:
     runs-on: ubuntu-latest
