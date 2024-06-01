@@ -40,5 +40,10 @@ jobs:
         cache: true
         # Used to specify the path to a dependency file - go.sum
         cache-dependency-path: ../../go.sum
+
+    - name: run
+      run: go run main.go
+
+      
           
   
