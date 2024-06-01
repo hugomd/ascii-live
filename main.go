@@ -8,7 +8,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/hugomd/ascii-live/frames"
+	"github.com/MaArasteh/ascii-live/frames"
 
 	"github.com/golang/glog"
 	"github.com/gorilla/mux"
