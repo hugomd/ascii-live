@@ -38,8 +38,7 @@ jobs:
         with:
           name: go-app
           path: .
-
-      - name: 'Deploy to Azure Web App'
+          
       - name: Deploy GitHub Pages site
         uses: actions/deploy-pages@v4.0.5    
         id: deploy-to-pages
