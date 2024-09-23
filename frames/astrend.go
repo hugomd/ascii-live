@@ -1,9 +1,9 @@
 package frames
 
 // This is the value stored in the FrameMap
-var MyAnimation = DefaultFrameType(myAnimationFrames)
+var AStrend = DefaultFrameType(as)
 
-var myAnimationFrames = []string{
+var as = []string{
   `Frame1`,
   `Frame2`,
   `Frame3`,
