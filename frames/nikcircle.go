@@ -1,9 +1,9 @@
 package frames
 
 // This is the value stored in the FrameMap
-var MyAnimation = DefaultFrameType(myAnimationFrames)
+var Nikcircle = DefaultFrameType(Nikcircleframes)
 
-var myAnimationFrames = []string{
+var Nikcircleframes = []string{
        @@@@@@      
     XX        XX   
   **            ** 
