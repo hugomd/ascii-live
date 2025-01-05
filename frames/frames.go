@@ -56,5 +56,10 @@ var FrameMap = map[string]FrameType{
 	"rick":            Rick,
 	"spidyswing":      Spidy,
 	"torus-knot":      TorusKnot,
-	"purdue":		   Purdue,
+	"purdue":          Purdue,
+	"as":              AStrend,
+	"bomb":            Bomb,
+	"maxwell":         Maxwell,
+	"earth":           Earth,
+	"kitty":           Kitty,
 }
