@@ -94,7 +94,7 @@ func handler(w http.ResponseWriter, r *http.Request) {
 			newLine := "\n"
 
 			// Write frames
-			fmt.Fprintf(w, clearScreen+frames.GetFrame(i)+newLine)
+			fmt.Fprint(w, clearScreen+frames.GetFrame(i)+newLine)
 			i++
 
 			// Send some data.
