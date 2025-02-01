@@ -1,10 +1,11 @@
 package frames
 
 // This is the value stored in the FrameMap
-var MyAnimation = DefaultFrameType(myAnimationFrames)
+var skull = DefaultFrameType(skullFrames)
 
-var myAnimationFrames = []string{
-  `Frame1`,
-  `Frame2`,
-  `Frame3`,
+var skullFrames = []string{
+  :),
+  :),
+  ;O,
+  ;O,
 }
