@@ -62,5 +62,6 @@ var FrameMap = map[string]FrameType{
 	"maxwell":         Maxwell,
 	"earth":           Earth,
 	"kitty":           Kitty,
+	"loveinswim":	   Swim,
 	"india":           India,
 }
