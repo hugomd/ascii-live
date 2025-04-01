@@ -1,7 +1,7 @@
 package frames
 
 // This is the value stored in the FrameMap
-var AStrend = DefaultFrameType(as)
+var HedgeHeaven = DefaultFrameType(as)
 
 var as = []string{
 
