@@ -48,7 +48,7 @@ Here's a list of lovely people who have contributed frames to this project:
 |--------------------------------------------------|-----------------------------------------------|-----------------------------------------------------------------|
 | [hexrcs](https://github.com/hexrcs)              | [`forrest.go`](./frames/forrest.go)           | [`run-forrest-run`](https://github.com/hexrcs/run-forrest-run)  |
 | [jmhobbs](https://github.com/jmhobbs)            | [`parrot.go`](./frames/parrot.go)             | [`terminal-parrot`](https://github.com/jmhobbs/terminal-parrot) |
-| [01000001](https://github.com/01000001-01101011) | [`knot.go`](./frames/knot.go)                 | [`torus-knot`](https://github.com/01000001-01101011/torus-knot/)|
+| [ahs3n](https://github.com/ahs3n)                | [`knot.go`](./frames/knot.go)                 | [`torus-knot`](https://github.com/ahs3n/torus-knot/)            |
 
 ## Related Projects
 * [parrot.live](https://github.com/hugomd/parrot.live)
