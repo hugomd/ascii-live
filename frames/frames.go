@@ -48,6 +48,7 @@ var FrameMap = map[string]FrameType{
 	"donut":           Donut,
 	"dvd":             Dvd,
 	"forrest":         Forrest,
+	"gopher":          Gopher,
 	"hes":             HES,
 	"knot":            TorusKnot,
 	"nyan":            Nyan,
