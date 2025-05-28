@@ -45,6 +45,7 @@ var FrameMap = map[string]FrameType{
 	"can-you-hear-me": Rick,
 	"clock":           Clock,
 	"coin":            Coin,
+	"dino":            Dino,
 	"donut":           Donut,
 	"dvd":             Dvd,
 	"forrest":         Forrest,
@@ -54,6 +55,7 @@ var FrameMap = map[string]FrameType{
 	"parrot":          Parrot,
 	"rick":            Rick,
 	"spidyswing":      Spidy,
+	"tesseract":       Tesseract
 	"torus-knot":      TorusKnot,
 	"purdue":          Purdue,
 	"as":              AStrend,
