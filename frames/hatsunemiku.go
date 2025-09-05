@@ -1,4 +1,4 @@
-package frames
+package frames 
 
 var Miku = DefaultFrameType(hatsumeMikuFrames)
 
