@@ -1,9 +1,9 @@
 package frames
 
 // This is the value stored in the FrameMap
-var MyAnimation = DefaultFrameType(myAnimationFrames)
+var tias = DefaultFrameType(tiasFrames)
 
-var myAnimationFrames = []string{
+var tiasFrames = []string{
   `:~77777!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!77JYYYYY55Y??????7!!!777!!!77??777!!!!~~~~^^^^^^^^^^^^~!?YPGB#
 ^~7777777777777!!77777!!!!!!!!!!!!!!!!7?JYYYYY5YJ???777!!!!!!!~~!!7??777!!!!~~~~~^^^^^^^::::::::::^~
 ^~777777!!!!!!!!!!!!!!!!!!!!!!!7!!!7777?JYYYYYJ7777777777!!!!!!!!!77!!!!!!~~~~~~^^^^^^::::::::::::..
