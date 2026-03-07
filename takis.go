@@ -67,5 +67,5 @@ var TakisFrames = []string{
 	`,
 }
 
-var Takis = DefaultFrameType(TakisFrames)
+var Kke = DefaultFrameType(TakisFrames)
 
