@@ -1,0 +1,93 @@
+import math
+import time
+import os
+from datetime import datetime
+
+def draw_real_analog_clock():
+    # Grid dimensions (Terminal characters are usually twice as tall as they are wide)
+    width = 60
+    height = 30
+    cx, cy = width // 2, height // 2
+    
+    # Radii for the X and Y axes to make it look like a perfect circle in the terminal
+    r_x, r_y = 25, 12
+
+    while True:
+        # Initialize empty canvas
+        grid = [[' ' for _ in range(width)] for _ in range(height)]
+        now = datetime.now()
+
+        # Draw the minute markers (dots)
+        for angle in range(0, 360, 6):
+            if angle % 30 == 0: 
+                continue # Leave space for the actual numbers
+            
+            rad = math.radians(angle - 90)
+            x = int(cx + r_x * math.cos(rad))
+            y = int(cy + r_y * math.sin(rad))
+            
+            if 0 <= x < width and 0 <= y < height:
+                grid[y][x] = '.'
+
+        # Draw the clock face numbers (1 to 12)
+        for i in range(1, 13):
+            angle = i * 30 - 90
+            rad = math.radians(angle)
+            x = int(cx + r_x * math.cos(rad))
+            y = int(cy + r_y * math.sin(rad))
+            
+            num_str = str(i)
+            # Center the two-digit numbers properly
+            for j, char in enumerate(num_str):
+                pos_x = x - len(num_str) // 2 + j
+                if 0 <= pos_x < width and 0 <= y < height:
+                    grid[y][pos_x] = char
+
+        # Function to draw solid hands
+        def draw_hand(length_ratio, angle, char):
+            rad = math.radians(angle - 90)
+            # Determine how many characters to place to make a solid line
+            steps = max(r_x, r_y) 
+            target_r_x = r_x * length_ratio
+            target_r_y = r_y * length_ratio
+            
+            for step in range(1, int(steps * length_ratio) + 1):
+                dist = step / (steps * length_ratio)
+                lx = int(cx + target_r_x * dist * math.cos(rad))
+                ly = int(cy + target_r_y * dist * math.sin(rad))
+                
+                if 0 <= lx < width and 0 <= ly < height:
+                    # Draw the hand, but don't overwrite the clock face numbers
+                    if grid[ly][lx] not in '1234567890':
+                        grid[ly][lx] = char
+
+        # 4. Calculate angles based on current time
+        s_angle = now.second * 6
+        m_angle = now.minute * 6 + now.second * 0.1
+        h_angle = (now.hour % 12) * 30 + now.minute * 0.5
+
+        # Draw hands (Shortest to longest, so longer hands overwrite appropriately)
+        draw_hand(0.45, h_angle, '#')  # Hour hand is short
+        draw_hand(0.75, m_angle, '*')  # Minute hand is medium
+        draw_hand(0.90, s_angle, '+')  # Second hand is long and light
+
+        grid[cy][cx] = 'O'
+
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("\n")
+        for row in grid:
+            print(''.join(row))
+        
+        
+        print(f"\n{' ' * 19}<JCPL_CHXD17>")
+        print(f"\n{' ' * 19}Digital Time: {now.strftime('%H:%M:%S')}")
+        print(f"{' ' * 20}Press Ctrl+C to exit")
+        
+        time.sleep(1 - time.time() % 1)
+
+if __name__ == "__main__":
+    try:
+        draw_real_analog_clock()
+    except KeyboardInterrupt:
+        os.system('cls' if os.name == 'nt' else 'clear')
+        print("Clock stopped.")
