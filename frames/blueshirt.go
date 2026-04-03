@@ -1,7 +1,7 @@
 package frames
 
 // This is the value stored in the FrameMap
-var Blueshirt = DefaultFrameType(myAnimationFrames)
+var Blueshirt = DefaultFrameType(BlueshirtFrames)
 
 var BlueshirtFrames = []string{
   //1
