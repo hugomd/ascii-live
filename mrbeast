@@ -1,0 +1,55 @@
+const readline = require("readline");
+
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+console.log(`
+=================================
+   🎬 MRBEAST CHALLENGE GAME 🎬
+=================================
+Survive all 3 challenges to win $1,000,000!
+
+Type your answers fast...
+Good luck.
+`);
+
+let step = 0;
+
+// Helper question function
+function ask(q, correct, next) {
+  rl.question(q + "\n> ", (answer) => {
+    if (answer.trim().toLowerCase() === correct) {
+      console.log("✅ Correct!\n");
+      next();
+    } else {
+      console.log("❌ You lost!\nGame Over.");
+      rl.close();
+    }
+  });
+}
+
+// GAME FLOW
+function challenge1() {
+  ask("Challenge 1: What is 5 + 5?", "10", challenge2);
+}
+
+function challenge2() {
+  ask("Challenge 2: Type 'mrbeast' exactly", "mrbeast", challenge3);
+}
+
+function challenge3() {
+  ask("Final Challenge: Pick a number 1 or 2 (type 1 or 2)", "1", win);
+}
+
+function win() {
+  console.log(`
+🎉 YOU WIN! 🎉
+💰 $1,000,000 (fake... or is it?)
+Thanks for playing MrBeast Challenge!
+`);
+  rl.close();
+}
+
+challenge1();
