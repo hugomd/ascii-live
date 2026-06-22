@@ -1,6 +1,6 @@
 package frames
 
-var sans10thanniversary = DefaultFrameType(sans10thanniversaryFrames)
+var Sans10thanniversary = DefaultFrameType(sans10thanniversaryFrames)
 
 var sans10thanniversaryFrames = []string{
                                     +#**********************+.
