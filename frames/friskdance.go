@@ -1,7 +1,7 @@
 package frames
 
 // This is the value stored in the FrameMap
-var friskdance = DefaultFrameType(friskdanceFrames)
+var Friskdance = DefaultFrameType(friskdanceFrames)
 
 var friskdanceFrames = []string{
                               .....................
