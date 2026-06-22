@@ -63,4 +63,6 @@ var FrameMap = map[string]FrameType{
 	"kitty":           Kitty,
 	"india":           India,
 	"brittany":        Brittany,
+	"frisk":           FriskDance,
+	"sans":            Sans10thanniversary,
 }
