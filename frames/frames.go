@@ -100,4 +100,5 @@ var FrameMap = map[string]FrameType{
 	"eclipseos":       EclipseOS,
 	"dozer":           Dozer,
 	"pikachu":         Pikachu,
+	"hatsunemiku":     Miku,
 }
