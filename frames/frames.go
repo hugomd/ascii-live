@@ -68,4 +68,5 @@ var FrameMap = map[string]FrameType{
 	"bodypack":        Bodypack,
 	"floss":           Floss,
 	"ring":            Ring,
+	"fourtwo":         FourTwo,
 }
