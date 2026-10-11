@@ -107,4 +107,5 @@ var FrameMap = map[string]FrameType{
 	"maya":            AbejaMaya,
 	"SodaPop":         SodaPop,
 	"spaceship":       Spaceship,
+	"shrek":           Shrek,
 }
