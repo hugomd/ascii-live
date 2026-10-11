@@ -106,4 +106,5 @@ var FrameMap = map[string]FrameType{
 	"pennywise":       Pennywise,
 	"maya":            AbejaMaya,
 	"SodaPop":         SodaPop,
+	"spaceship":       Spaceship,
 }
