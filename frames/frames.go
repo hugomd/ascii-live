@@ -75,4 +75,5 @@ var FrameMap = map[string]FrameType{
 	"oiia-cat":        Oiia,
 	"forty-two":       FortyTwo,
 	"duck":            Duck,
+	"ethel":           Ethel,
 }
