@@ -96,4 +96,5 @@ var FrameMap = map[string]FrameType{
 	"badapple":        BadApple,
 	"minecraft":       Minecraft,
 	"sweaty-gamer":    SweatyGamer,
+	"gandalf":         Gandalf,
 }
