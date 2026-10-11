@@ -72,4 +72,5 @@ var FrameMap = map[string]FrameType{
 	"Furry":           Furry,
 	"simpson-bush":    Simpson,
 	"skull":           Skull,
+	"oiia-cat":        Oiia,
 }
