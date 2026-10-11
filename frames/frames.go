@@ -113,4 +113,5 @@ var FrameMap = map[string]FrameType{
 	"kke":             Kke,
 	"dancingcoin":     DancingCoin,
 	"anonymous":       Anonymous,
+	"analogclock":     AnalogClock,
 }
