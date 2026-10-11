@@ -115,4 +115,5 @@ var FrameMap = map[string]FrameType{
 	"anonymous":       Anonymous,
 	"analogclock":     AnalogClock,
 	"drink":           Drink,
+	"blueshirt":       Blueshirt,
 }
