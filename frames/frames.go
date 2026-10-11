@@ -79,4 +79,6 @@ var FrameMap = map[string]FrameType{
 	"gagner":          Hello,
 	"perdu":           Hello,
 	"hello":           Hello,
+	"dino":            Dino,
+	"tesseract":       Tesseract,
 }
