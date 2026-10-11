@@ -101,4 +101,5 @@ var FrameMap = map[string]FrameType{
 	"dozer":           Dozer,
 	"pikachu":         Pikachu,
 	"hatsunemiku":     Miku,
+	"gon":             Gon,
 }
