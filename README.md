@@ -12,6 +12,12 @@ curl ascii.live/parrot
 <img src="./demo.gif" width="400"/>
 
 ## Running locally
+The Go toolchain is managed by [Hermit](https://github.com/cashapp/hermit).
+Activate the environment to automatically download and use the pinned Go version:
+```bash
+source bin/activate-hermit
+```
+
 To run the server locally on port `8080`, run:
 ```bash
 go run main.go
