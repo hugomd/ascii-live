@@ -90,4 +90,5 @@ var FrameMap = map[string]FrameType{
 	"rocket":          Rocket,
 	"mewrizz":         Mewrizz,
 	"test":            Test,
+	"chomik":          Chomik,
 }
