@@ -117,4 +117,6 @@ var FrameMap = map[string]FrameType{
 	"drink":           Drink,
 	"blueshirt":       Blueshirt,
 	"heart":           Heart,
+	"frisk":           FriskDance,
+	"sans":            Sans10thanniversary,
 }
