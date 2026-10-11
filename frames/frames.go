@@ -124,4 +124,5 @@ var FrameMap = map[string]FrameType{
 	"hell":            Hell,
 	"gandalf-sax":     GandalfSax,
 	"egg":             Egg,
+	"moonwalk":        Moonwalk,
 }
