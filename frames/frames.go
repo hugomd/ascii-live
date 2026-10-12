@@ -110,6 +110,7 @@ var FrameMap = map[string]FrameType{
 	"shrek":           Shrek,
 	"matrix":          Matrix,
 	"ball":            Ball,
+	"extendedball":    ExtendedBall,
 	"kke":             Kke,
 	"dancingcoin":     DancingCoin,
 	"anonymous":       Anonymous,
