@@ -120,6 +120,7 @@ var FrameMap = map[string]FrameType{
 	"heart":           Heart,
 	"frisk":           FriskDance,
 	"sans":            Sans10thanniversary,
+	"sixseven":        SixSeven,
 	"pedro":           Pedro,
 	"bangladesh":      Bangladesh,
 	"hell":            Hell,
