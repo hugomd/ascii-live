@@ -30,7 +30,7 @@ func getHelixFrame(i int) string {
 	t := float64(hxWrap(i, hxFrames)) * (2 * math.Pi / float64(hxFrames))
 	ax := 0.35 + 0.12*math.Sin(t*0.6)
 	ay := t
-	az := 0.12 * math.Sin(t * 0.45)
+	az := 0.12 * math.Sin(t*0.45)
 
 	grid := make([][]hxCell, hxHeight)
 	for y := range grid {
@@ -50,7 +50,7 @@ func getHelixFrame(i int) string {
 		z := (u - 0.5) * 2.7
 		r := 1.05
 		a := hxVec{r * math.Cos(theta), r * math.Sin(theta), z}
-		b := hxVec{r * math.Cos(theta + math.Pi), r * math.Sin(theta + math.Pi), z}
+		b := hxVec{r * math.Cos(theta+math.Pi), r * math.Sin(theta+math.Pi), z}
 		strandA[s] = hxProject(hxRotate(a, ax, ay, az))
 		strandB[s] = hxProject(hxRotate(b, ax, ay, az))
 	}
