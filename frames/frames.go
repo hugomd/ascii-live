@@ -130,4 +130,5 @@ var FrameMap = map[string]FrameType{
 	"rainbow-tunnel":  RainbowTunnel,
 	"aurora":          Aurora,
 	"plasma":          Plasma,
+	"helix":           Helix,
 }
