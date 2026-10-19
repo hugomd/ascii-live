@@ -46,7 +46,7 @@ func getRainbowTunnelFrame(i int) string {
 			v := depth*0.35 + t*6
 
 			ring := 0.5 + 0.5*math.Sin(v*2*math.Pi)
-			spoke := 0.5 + 0.5*math.Cos(u*12*math.Pi - depth*1.4 + t*4*math.Pi)
+			spoke := 0.5 + 0.5*math.Cos(u*12*math.Pi-depth*1.4+t*4*math.Pi)
 			wall := rtClamp(0.35 + 0.65*ring*ring + 0.25*spoke)
 
 			hue := math.Mod(u+t*0.85+depth*0.04, 1)
