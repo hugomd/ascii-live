@@ -131,4 +131,5 @@ var FrameMap = map[string]FrameType{
 	"aurora":          Aurora,
 	"plasma":          Plasma,
 	"helix":           Helix,
+	"cube-lite":       CubeLite,
 }
