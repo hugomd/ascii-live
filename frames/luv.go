@@ -1,6 +1,12 @@
 package frames
 
-var Luv = DefaultFrameType(heartFrames)
+var Luv = FrameType{
+	GetFrame: func(i int) string {
+		return "\033[31m" + heartFrames[i%len(heartFrames)] + "\033[0m"
+	},
+	GetLength: DefaultGetLength(heartFrames),
+	GetSleep:  DefaultGetSleep(),
+}
 
 var heartFrames = []string{
 	// 1. PEAK EXPANSION — Maximum width & brilliant '@' core
