@@ -39,6 +39,8 @@ func DefaultFrameType(frames []string) FrameType {
 }
 
 var FrameMap = map[string]FrameType{
+	"airplane":        Airplane,
+	"globe":           Globe,
 	"batman":          Batman,
 	"batman-running":  BNR,
 	"bnr":             BNR,
