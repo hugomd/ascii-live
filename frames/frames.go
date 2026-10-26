@@ -132,4 +132,5 @@ var FrameMap = map[string]FrameType{
 	"plasma":          Plasma,
 	"helix":           Helix,
 	"cube-lite":       CubeLite,
+	"luv":             Luv,
 }
