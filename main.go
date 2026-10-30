@@ -5,6 +5,7 @@ import (
 	"flag"
 	"fmt"
 	"net/http"
+	"os"
 	"strings"
 	"time"
 
@@ -25,6 +26,11 @@ var NotCurledMessage = map[string]string{
 var availableFrames []string
 
 func init() {
+	if dir := os.Getenv("CUSTOM_FRAMES_DIR"); dir != "" {
+		if err := frames.LoadCustomFrames(dir); err != nil {
+			panic(fmt.Errorf("load custom frames: %w", err))
+		}
+	}
 	for k := range frames.FrameMap {
 		availableFrames = append(availableFrames, k)
 	}
