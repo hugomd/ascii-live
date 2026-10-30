@@ -26,8 +26,13 @@ var NotCurledMessage = map[string]string{
 var availableFrames []string
 
 func init() {
-	if dir := os.Getenv("CUSTOM_FRAMES_DIR"); dir != "" {
-		if err := frames.LoadCustomFrames(dir); err != nil {
+	dir := os.Getenv("CUSTOM_FRAMES_DIR")
+	usingDefault := dir == ""
+	if usingDefault {
+		dir = "./ansi_frames"
+	}
+	if err := frames.LoadCustomFrames(dir); err != nil {
+		if !usingDefault || !os.IsNotExist(err) {
 			panic(fmt.Errorf("load custom frames: %w", err))
 		}
 	}
