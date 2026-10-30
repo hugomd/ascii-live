@@ -1,6 +1,6 @@
 #!/bin/bash
-
 # Generate ASCII art frames from a GIF file.
+# Credits for original script: https://gist.github.com/teanup/17ee7938e1aa9e1d9d6b2f3fc611ad78
 
 IN_FILE=""
 OUT_DIR="ansi_frames"
