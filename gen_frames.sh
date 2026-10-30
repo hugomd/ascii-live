@@ -20,8 +20,8 @@ if ! command -v jp2a &> /dev/null; then
   echo "jp2a not found. Install it with: sudo apt install jp2a" >&2
   exit 1
 fi
-if ! command -v convert &> /dev/null; then
-  echo "convert not found. Install it with: sudo apt install imagemagick" >&2
+if ! command -v magick &> /dev/null; then
+  echo "magick not found. Install it with: sudo apt install imagemagick" >&2
   exit 1
 fi
 
@@ -104,7 +104,8 @@ mkdir -p "$OUT_DIR/$NAME"
 rm -f "$OUT_DIR/$NAME/"*
 
 # Generate PNG frames
-convert -coalesce "$IN_FILE" "$OUT_DIR/$NAME/frame-%03d.png"
+echo "[+] Converting.."
+magick "$IN_FILE" -coalesce "$OUT_DIR/$NAME/frame-%03d.png"
 
 # Set delay
 echo "$DELAY" > "$OUT_DIR/$NAME/delay.env"
