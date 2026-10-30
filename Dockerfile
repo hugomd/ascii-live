@@ -10,4 +10,5 @@ RUN cd /go/src/github.com/hugomd/ascii-live && \
 FROM scratch
 COPY --from=build-env /go/src/github.com/hugomd/ascii-live/main /
 COPY --from=build-env /etc/ssl/certs/ca-certificates.crt /etc/ssl/certs/ca-certificates.crt
+USER 65532:65532
 CMD ["/main"]
