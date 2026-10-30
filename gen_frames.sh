@@ -2,9 +2,8 @@
 
 # Generate ASCII art frames from a GIF file.
 
-HOSTNAME=localhost:8124
 IN_FILE=""
-OUT_DIR="ansi_frames/"
+OUT_DIR="ansi_frames"
 NAME=""
 DELAY=100
 COLOR_DEPTH=8
@@ -117,7 +116,4 @@ for f in "$OUT_DIR/$NAME/frame-"*.png; do
   rm "$f"
 done
 
-echo "[+] Done! Try it with:"
-echo "Restart the container to load the new frames: docker compose restart"
-echo "curl $HOSTNAME/$NAME"
-exit 0
+echo "[+] Done! Dumped to $OUT_DIR/$NAME"
