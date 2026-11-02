@@ -21,8 +21,10 @@ import (
 )
 
 const (
-	maxUploadSize = 5 << 20 // 5 MiB
-	artWidth      = 80
+	maxUploadSize     = 5 << 20 // 5 MiB
+	maxImageDimension = 8192
+	maxImagePixels    = 16 * 1024 * 1024
+	artWidth          = 80
 )
 
 var notFoundMessage = map[string]string{
@@ -77,7 +79,11 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 	}
 
 	r.Body = http.MaxBytesReader(w, r.Body, maxUploadSize)
-	if err := r.ParseMultipartForm(maxUploadSize); err != nil {
+	parseErr := r.ParseMultipartForm(maxUploadSize)
+	if r.MultipartForm != nil {
+		defer r.MultipartForm.RemoveAll()
+	}
+	if parseErr != nil {
 		writeJSON(w, map[string]string{"error": "upload must be multipart form data with a field named image and be no larger than 5 MiB"}, http.StatusBadRequest)
 		return
 	}
@@ -88,8 +94,21 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 	}
 	defer file.Close()
 
-	img, format, err := image.Decode(file)
+	config, format, err := image.DecodeConfig(file)
 	if err != nil || (format != "png" && format != "jpeg") {
+		writeJSON(w, map[string]string{"error": "only PNG and JPEG images are supported"}, http.StatusBadRequest)
+		return
+	}
+	if !imageDimensionsAllowed(config.Width, config.Height) {
+		writeJSON(w, map[string]string{"error": "image dimensions are too large"}, http.StatusBadRequest)
+		return
+	}
+	if _, err := file.Seek(0, io.SeekStart); err != nil {
+		writeJSON(w, map[string]string{"error": "could not read uploaded image"}, http.StatusBadRequest)
+		return
+	}
+	img, decodedFormat, err := image.Decode(file)
+	if err != nil || decodedFormat != format {
 		writeJSON(w, map[string]string{"error": "only PNG and JPEG images are supported"}, http.StatusBadRequest)
 		return
 	}
@@ -115,6 +134,12 @@ func uploadHandler(w http.ResponseWriter, r *http.Request) {
 		"url":     baseURL + "/art/" + id,
 		"command": "curl " + baseURL + "/art/" + id,
 	}, http.StatusCreated)
+}
+
+func imageDimensionsAllowed(width, height int) bool {
+	return width > 0 && height > 0 &&
+		width <= maxImageDimension && height <= maxImageDimension &&
+		width <= maxImagePixels/height
 }
 
 func newArtID() (string, error) {
