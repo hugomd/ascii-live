@@ -32,7 +32,7 @@ The response contains an `url` and a ready-to-copy `command`:
 }
 ```
 
-Anyone can run the returned command in a terminal. Uploads are limited to PNG/JPEG files up to 5 MiB and are rendered at a maximum width of 80 terminal columns.
+Anyone can run the returned command in a terminal. Uploads are limited to PNG/JPEG files up to 5 MiB, 8,192 pixels per side, and 16,777,216 total pixels. Art is rendered at a maximum width of 80 terminal columns.
 
 ## Running locally
 The Go toolchain is managed by [Hermit](https://github.com/cashapp/hermit).
@@ -89,5 +89,5 @@ Here's a list of lovely people who have contributed frames to this project:
 ## Related Projects
 * [parrot.live](https://github.com/hugomd/parrot.live)
 * [terminal-parrot](https://github.com/jmhobbs/terminal-parrot)
-* [cultofthepartyparrot.com](https://github.com/jmhobbs/cultofthepartyparrot.com)
+* [cultofthepartyparrot.com](https://github.com/hugomd/cultofthepartyparrot.com)
 * [parrotsay](https://github.com/matheuss/parrotsay)
