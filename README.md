@@ -1,4 +1,4 @@
-# ascii.live
+# ascii-live
 
 A project for hosting curl-based animations, all in one place, and a follow up to [`parrot.live`](https://github.com/hugomd/parrot.live).
 
@@ -11,6 +11,29 @@ curl ascii.live/parrot
 
 <img src="./demo.gif" width="400"/>
 
+## Upload an image and share live terminal art
+
+PNG and JPEG images can be converted into terminal art and served from a shareable URL. The uploaded art is kept in memory by the running server, so it is available while that server instance is running.
+
+Upload an image with curl:
+
+```bash
+curl -X POST -F "image=@photo.png" https://ascii.live/upload
+```
+
+The response contains an `url` and a ready-to-copy `command`:
+
+```json
+{
+  "id": "a1b2c3d4e5f6",
+  "format": "png",
+  "url": "https://ascii.live/art/a1b2c3d4e5f6",
+  "command": "curl https://ascii.live/art/a1b2c3d4e5f6"
+}
+```
+
+Anyone can run the returned command in a terminal. Uploads are limited to PNG/JPEG files up to 5 MiB and are rendered at a maximum width of 80 terminal columns.
+
 ## Running locally
 The Go toolchain is managed by [Hermit](https://github.com/cashapp/hermit).
 Activate the environment to automatically download and use the pinned Go version:
@@ -21,6 +44,13 @@ source bin/activate-hermit
 To run the server locally on port `8080`, run:
 ```bash
 go run main.go
+```
+
+For a local upload:
+
+```bash
+curl -X POST -F "image=@photo.jpg" http://localhost:8080/upload
+curl http://localhost:8080/art/<id>
 ```
 
 ## Running in Docker
