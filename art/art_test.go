@@ -35,6 +35,20 @@ func TestFromImageResizesAndPreservesTerminalShape(t *testing.T) {
 	}
 }
 
+func TestFromImageCompositesTransparencyOverBlackOnce(t *testing.T) {
+	img := image.NewNRGBA(image.Rect(0, 0, 2, 1))
+	img.SetNRGBA(0, 0, color.NRGBA{R: 255, G: 255, B: 255, A: 128})
+	img.SetNRGBA(1, 0, color.NRGBA{R: 255, A: 0})
+
+	got, err := FromImage(img, Options{MaxWidth: 2})
+	if err != nil {
+		t.Fatal(err)
+	}
+	if got != "+@" {
+		t.Fatalf("expected half-transparent white and transparent black to map to \"+@\", got %q", got)
+	}
+}
+
 func TestFromImageRejectsNil(t *testing.T) {
 	if _, err := FromImage(nil, Options{}); err == nil {
 		t.Fatal("expected nil image error")
