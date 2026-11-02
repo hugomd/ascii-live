@@ -58,12 +58,8 @@ func FromImage(src image.Image, opts Options) (string, error) {
 }
 
 func luminance(c color.Color) uint8 {
-	r, g, b, a := c.RGBA()
-	if a != 0xffff {
-		// Composite transparent pixels over black so transparent PNGs remain predictable.
-		r = r * a / 0xffff
-		g = g * a / 0xffff
-		b = b * a / 0xffff
-	}
+	// RGBA returns alpha-premultiplied channel values, which already represent
+	// compositing the pixel over black.
+	r, g, b, _ := c.RGBA()
 	return uint8((299*r + 587*g + 114*b) / 1000 / 257)
 }
