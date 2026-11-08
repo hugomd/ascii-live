@@ -135,5 +135,5 @@ var FrameMap = map[string]FrameType{
 	"helix":           Helix,
 	"cube-lite":       CubeLite,
 	"luv":             Luv,
-	"dark-knight":     Dark-Knight,
+	"dark-knight":     DarkKnight,
 }
