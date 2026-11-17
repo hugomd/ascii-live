@@ -136,4 +136,5 @@ var FrameMap = map[string]FrameType{
 	"cube-lite":       CubeLite,
 	"luv":             Luv,
 	"hacker":          Hacker,
+	"chip":            DefaultFrameType(Chip),
 }
