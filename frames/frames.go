@@ -138,4 +138,5 @@ var FrameMap = map[string]FrameType{
 	"luv":             Luv,
 	"hacker":          Hacker,
 	"chip":            DefaultFrameType(Chip),
+	"gyro":            Gyro,
 }
