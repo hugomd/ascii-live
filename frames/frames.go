@@ -97,6 +97,7 @@ var FrameMap = map[string]FrameType{
 	"macarenavisbal":  Macarena,
 	"badapple":        BadApple,
 	"minecraft":       Minecraft,
+	"moise":           Moise,
 	"sweaty-gamer":    SweatyGamer,
 	"gandalf":         Gandalf,
 	"eclipseos":       EclipseOS,
@@ -136,4 +137,7 @@ var FrameMap = map[string]FrameType{
 	"cube-lite":       CubeLite,
 	"luv":             Luv,
 	"blackhole": BlackHole,
+	"hacker":          Hacker,
+	"chip":            DefaultFrameType(Chip),
+	"gyro":            Gyro,
 }
