@@ -136,6 +136,7 @@ var FrameMap = map[string]FrameType{
 	"helix":           Helix,
 	"cube-lite":       CubeLite,
 	"luv":             Luv,
+	"blackhole":       BlackHole,
 	"hacker":          Hacker,
 	"chip":            DefaultFrameType(Chip),
 	"gyro":            Gyro,
