@@ -1,6 +1,12 @@
 package frames
 
-var Moise = DefaultFrameType(moiseFrames)
+import "time"
+
+var Moise = FrameType{
+	GetFrame:  DefaultGetFrame(moiseFrames),
+	GetLength: DefaultGetLength(moiseFrames),
+	GetSleep:  func() time.Duration { return 900 * time.Millisecond },
+}
 
 var moiseFrames = []string{
 	`   /\    /\   
@@ -14,4 +20,16 @@ var moiseFrames = []string{
 
       | |     
       |_|     `,
+	`    _____     
+   / ____|    
+   \___ \     
+   ____) |    
+  |_____/     `,
+	`    ______    
+
+   |  ____|   
+   | |__      
+   |  __|     
+   | |____    
+   |______|   `,
 }
