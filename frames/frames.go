@@ -141,4 +141,5 @@ var FrameMap = map[string]FrameType{
 	"chip":            DefaultFrameType(Chip),
 	"gyro":            Gyro,
 	"Portrait":        Portrait,
+	"stickbug":          Stickbug,
 }
